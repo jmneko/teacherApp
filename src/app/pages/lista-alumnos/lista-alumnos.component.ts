@@ -11,6 +11,8 @@ import { UsersService } from 'src/app/services/users.service';
 export class ListaAlumnosComponent {
 
   arrUsuario: IUser[] = [];
+  arrAlumnoId: number[] = [];
+
   activatedRoute = inject(ActivatedRoute);
   usuariosService = inject(UsersService);
 
@@ -21,38 +23,11 @@ export class ListaAlumnosComponent {
         let id = params.profesorId;
         
         this.arrUsuario = await this.usuariosService.getAlumnosByProfesorId(id);
-        console.log(this.arrUsuario)
-
+        console.log(this.arrUsuario);
       } catch (error) {
         console.log(error)
         
-      }
-      
+      } 
     })
-
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    /*try {
-      const allUsuarios = await this.usuariosService.getAll();
-      this.arrUsuario = allUsuarios.filter(usuario => usuario.rol === 'alumn');
-      console.log(this.arrUsuario)
-    } catch (error) {
-    }
   }
-
-  clasificarUsuarios(usuarios: Usuario[]): Usuario[] {
-    const aceptados = usuarios.filter(usuario => usuario.activo === true);
-    console.log()
-    const solicitud = usuarios.filter(usuario => usuario.activo === false);
-
-    return [...aceptados, ...solicitud];*/
-  }
-
 }

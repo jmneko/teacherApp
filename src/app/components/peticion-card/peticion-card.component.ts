@@ -10,4 +10,8 @@ export class PeticionCardComponent {
 
   @Input() miUsuario!: IUser;
 
+  ngOnInit() {
+    console.log(this.miUsuario);
+  }
+
 }
