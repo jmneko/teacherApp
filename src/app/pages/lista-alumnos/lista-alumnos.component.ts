@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { IUser } from 'src/app/models/interfaces/user.interface';
 import { UsersService } from 'src/app/services/users.service';
 
@@ -10,25 +11,26 @@ import { UsersService } from 'src/app/services/users.service';
 export class ListaAlumnosComponent {
 
   arrUsuario: IUser[] = [];
+  activatedRoute = inject(ActivatedRoute);
   usuariosService = inject(UsersService);
 
   async ngOnInit(): Promise<void> {
     
-    
-    try {
-      const profesorId = 2;
+    this.activatedRoute.params.subscribe( async (params:any) => {
+      try {
+        let id = params.profesorId;
+        
+        this.arrUsuario = await this.usuariosService.getAlumnosByProfesorId(id);
+        console.log(this.arrUsuario)
 
-      const alumnos = await this.usuariosService.getAlumnosByProfesorId(profesorId);
+      } catch (error) {
+        console.log(error)
+        
+      }
+      
+    })
 
-      this.arrUsuario = alumnos;
-      console.log(this.arrUsuario)
-    } catch (error) {
-      console.log(error);
-    }
   
-    
-    
-    
     
     
     
