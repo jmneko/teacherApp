@@ -1,1 +1,40 @@
-<p>menu works!</p>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/']">Admin</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/profesor']">Profesores</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/usuarios']">P.Alumno</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/clases']">Clases de alumno</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/clasesCard']">CARD clases</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/alumnoCard']">CARD alumno</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/peticionCard']">CARD peticion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/listaAlumnos']">Lista alumnos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

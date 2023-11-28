@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IUser } from 'src/app/models/interfaces/user.interface';
 
 @Component({
   selector: 'app-peticion-card',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./peticion-card.component.css']
 })
 export class PeticionCardComponent {
+
+  @Input() miUsuario!: IUser;
 
 }
