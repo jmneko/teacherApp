@@ -102,7 +102,18 @@
       padding-inline: 0.3rem;
       color: var(--primary);
     }
+
+    .check {
+      display: flex;
+      flex-direction: row;
+      padding: 3px;
+    }
     
+    .title__check {
+      color: #fd7acb;
+      font-size: 15px;
+      margin-right: 5px;  
+    }
   
     /* ERROR EN EL FORMULARIO */
   

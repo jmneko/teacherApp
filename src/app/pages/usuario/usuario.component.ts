@@ -1,4 +1,4 @@
-import { Component, Inject, Input, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IUser } from 'src/app/models/interfaces/user.interface';
 import { UsersService } from 'src/app/services/users.service';
@@ -11,10 +11,13 @@ import { UsersService } from 'src/app/services/users.service';
 export class UsuarioComponent {
 
   miUsuario: IUser | any;
+
   activatedRoute = inject(ActivatedRoute);
   userService = inject(UsersService);
 
   ngOnInit() : void {
+
+    /* Recuperacion de datos del usuario*/ 
 
     this.activatedRoute.params.subscribe((params: any) => {
       let id = params.usuarioId;
@@ -23,6 +26,5 @@ export class UsuarioComponent {
       })
     })
   }
-
 
 }
