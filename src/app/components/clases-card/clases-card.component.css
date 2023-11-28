@@ -1,4 +1,4 @@
-onlyCard {
+.onlyCard {
     background-image: url(https://marketplace.canva.com/EAEK4dC2olw/1/0/1600w/canva-arcoíris-gradiente-rosa-y-naranja-fondo-virtual-c3PYha1JI9M.jpg);
     background-size: auto;
     margin-top: 5%;
@@ -12,7 +12,7 @@ onlyCard {
 .cardComponent {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
 }
 
