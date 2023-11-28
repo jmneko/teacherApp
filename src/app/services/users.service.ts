@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { IUser } from '../models/interfaces/user.interface';
 import { Observable, lastValueFrom } from 'rxjs';
+import { SolicitudClase } from '../models/interfaces/peticion.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +19,8 @@ export class UsersService {
     return lastValueFrom(this.httpClient.get<IUser[]>(this.baseUrl));
   }
 
-  getAlumnosByProfesorId(profesorId: number): Promise<IUser[]> {
-    return lastValueFrom(this.httpClient.get<IUser[]>(`${this.baseUrl}${profesorId}/alumnos`));
+  getAlumnosByProfesorId(profesorId: number): Promise<SolicitudClase[]> {
+    return lastValueFrom(this.httpClient.get<SolicitudClase[]>(`${this.baseUrl}${profesorId}/alumnos`));
   }
 
   getById(usuarioId: number): Observable<any> {

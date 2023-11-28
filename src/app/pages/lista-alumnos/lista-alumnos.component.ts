@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IUser } from 'src/app/models/interfaces/user.interface';
+import { SolicitudClase } from 'src/app/models/interfaces/peticion.interface';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -10,8 +10,7 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class ListaAlumnosComponent {
 
-  arrUsuario: IUser[] = [];
-  arrAlumnoId: number[] = [];
+  arrUsuario: SolicitudClase[] = [];
 
   activatedRoute = inject(ActivatedRoute);
   usuariosService = inject(UsersService);

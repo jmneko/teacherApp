@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IUser } from 'src/app/models/interfaces/user.interface';
+import { SolicitudClase } from 'src/app/models/interfaces/peticion.interface';
 
 @Component({
   selector: 'app-peticion-card',
@@ -8,7 +8,7 @@ import { IUser } from 'src/app/models/interfaces/user.interface';
 })
 export class PeticionCardComponent {
 
-  @Input() miUsuario!: IUser;
+  @Input() miUsuario!: SolicitudClase;
 
   ngOnInit() {
     console.log(this.miUsuario);
