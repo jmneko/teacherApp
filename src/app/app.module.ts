@@ -1,7 +1,11 @@
+//Librerias
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+
+
+//Componentes
 import { AppComponent } from './app.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { P404Component } from './pages/p404/p404.component';
@@ -12,6 +16,7 @@ import { ClasesCardComponent } from './components/clases-card/clases-card.compon
 import { FormUsuariosComponent } from './components/form-usuarios/form-usuarios.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PeticionCardComponent } from './components/peticion-card/peticion-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,9 @@ import { PeticionCardComponent } from './components/peticion-card/peticion-card.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
